@@ -13,16 +13,10 @@
       rel="stylesheet"
     />
     {% tailwind_css %}
-    <style>
-      body {
-        max-height: 100vh;
-        overflow: hidden;
-      }
-
-      * {
-        font-family: "Nunito", sans-serif;
-      }
-    </style>
+    <link
+      href="{% static 'main/css/main.css' %}"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="font-serif leading-normal tracking-normal text-gray-500">
@@ -38,10 +32,10 @@
               />
             </a>
           </div>
-          <div class="menu-items flex flex-col">
+          <div class="menu-items flex flex-col mt-6">
             <a
               href="/"
-              class="mb-2 flex items-center justify-center rounded-md py-2 bg-pink-100"
+              class="mb-2 flex items-center justify-center rounded-xl py-2 bg-pink-100"
             >
               <img
                 src="{% static 'main/icons/icon-ticket.svg' %}"

@@ -8,23 +8,78 @@
     </div>
 
     <div class="flex items-center font-bold mx-4">
-      <a href="#" class="flex items-center text-gray-800">
+      <a href="#" class="flex items-center text-gray-800 relative dropdown">
         <span>Passion Economy 2021</span>
         <span class="ml-4 block">
-          <img
-            src="{% static 'main/icons/icon-chevron-down.svg' %}"
-            alt="Chevron Down"
+          <svg
             class="w-4"
-          />
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 9L12 17L20 9"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </span>
+
+        <div
+          class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95 mt-5"
+        >
+          <div
+            class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+            aria-labelledby="headlessui-menu-button-1"
+            id="headlessui-menu-items-117"
+            role="menu"
+          >
+            <div class="px-4 py-3">
+              <p class="text-sm leading-5 font-normal text-gray-400">Other Events</p>
+            </div>
+            <div class="py-1">
+              <a
+                href="#"
+                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                role="menuitem"
+                >Event 2</a
+              >
+              <a
+                href="#"
+                class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+                role="menuitem"
+                >Event 3</a
+              >
+            </div>
+          </div>
+        </div>
       </a>
       <a href="#">
         <span class="ml-4 block">
-          <img
-            src="{% static 'main/icons/icon-more-horizontal.svg' %}"
-            alt="More"
+          <svg
             class="w-4"
-          /> </span
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13Z"
+              stroke="black"
+              stroke-width="2"
+            />
+            <path
+              d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+              stroke="black"
+              stroke-width="2"
+            />
+            <path
+              d="M20 13C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13Z"
+              stroke="black"
+              stroke-width="2"
+            />
+          </svg> </span
       ></a>
     </div>
   </div>
@@ -46,13 +101,71 @@
 
     <div class="flex items-center">
       <div class="mr-4">
-        {% include 'main/partials/button.html' with text="Publish" color="default" only %}
+        <a
+          href="#"
+          class="rounded-lg hover:opacity-90 bg-violet-200 py-3 px-6 text-sm font-bold"
+        >
+          <span class="text-violet-700">Publish</span>
+        </a>
       </div>
-      {% include 'main/partials/button.html' with text="Preview Event" color="primary" icon="main/icons/chevron-down" only %}
+      <a
+        href="#"
+        class="rounded-lg hover:opacity-90 bg-violet-700 py-3 px-6 text-sm font-bold dropdown"
+      >
+        <span class="flex justify-center items-center">
+          <span class="text-white"> Preview Event </span>
+          <span class="ml-2">
+            <svg
+              class="w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 9L12 17L20 9"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </span>
+      </a>
+
+      <div
+        class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95 mt-8"
+      >
+        <div
+          class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
+          aria-labelledby="headlessui-menu-button-1"
+          id="headlessui-menu-items-117"
+          role="menu"
+        >
+          <div class="px-4 py-3">
+            <p class="text-sm leading-5">Preview Event</p>
+          </div>
+          <div class="py-1">
+            <a
+              href="#"
+              class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+              role="menuitem"
+              >Option 1</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"
+              role="menuitem"
+              >Option 2</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- Sub Nav -->
 <div class="border-b mx-6 mt-2 text-sm font-bold">
   <ul class="flex">
     <li class="mr-8">
@@ -80,6 +193,7 @@
     </li>
   </ul>
 </div>
+<!-- /Sub Nav -->
 
 <!-- Sub content -->
 <div class="sub-content bg-slate-50 flex-1 px-6 py-8 h-full">
@@ -102,9 +216,51 @@
 
       <div class="flex items-center">
         <div class="mr-4">
-          {% include 'main/partials/button.html' with text="Copy Link" color="default" only %}
+          <a
+            href="#"
+            class="rounded-lg hover:opacity-90 bg-violet-200 py-3 px-6 text-sm font-bold flex justify-center items-center"
+          >
+            <span>
+              <svg
+                class="w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 6H16C17.5913 6 19.1174 6.63214 20.2426 7.75736C21.3679 8.88258 22 10.4087 22 12C22 13.5913 21.3679 15.1174 20.2426 16.2426C19.1174 17.3679 17.5913 18 16 18H15M9 18H8C6.4087 18 4.88258 17.3679 3.75736 16.2426C2.63214 15.1174 2 13.5913 2 12C2 10.4087 2.63214 8.88258 3.75736 7.75736C4.88258 6.63214 6.4087 6 8 6H9"
+                  stroke="#6E44FF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M7 12H17" stroke="black" stroke-width="2" />
+              </svg>
+            </span>
+            <span class="text-violet-700 ml-2"> Copy Link </span>
+          </a>
         </div>
-        {% include 'main/partials/button.html' with text="Manage Event" color="default" only %}
+        <a
+          href="#"
+          class="rounded-lg hover:opacity-90 bg-violet-200 py-3 px-6 text-sm font-bold flex justify-center items-center"
+        >
+          <span class="text-violet-700"> Manage Event </span>
+          <span class="ml-2">
+            <svg
+              class="w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12V12Z"
+                fill="#6E44FF"
+              />
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
 
@@ -167,7 +323,29 @@
   <div class="mt-12">
     <div class="flex items-center justify-between">
       <div class="text-lg font-bold">Event Stats</div>
-      {% include 'main/partials/button.html' with text="Export Report" color="default" only %}
+      <a
+        href="#"
+        class="rounded-lg hover:opacity-90 bg-violet-200 py-3 px-6 text-sm font-bold flex justify-center items-center"
+      >
+        <span>
+          <svg
+            class="w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 9.98193V19.9819H19V9.98193H15V7.98193H21V21.9819H3V7.98193H9V9.98193H5Z"
+              fill="#6E44FF"
+            />
+            <path
+              d="M13 2H11V14.053L8.46505 11.517L7.05005 12.932L12 17.882L16.95 12.932L15.536 11.517L13 14.053V2Z"
+              fill="#6E44FF"
+            />
+          </svg>
+        </span>
+        <span class="text-violet-700 ml-2">Export Report</span>
+      </a>
     </div>
 
     <!-- Stats Content -->
@@ -175,27 +353,54 @@
       <!-- Cards List -->
       <div class="grid grid-cols-3 gap-x-6 gap-y-8 flex-1">
         <!-- Card -->
-        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+        <div class="bg-white rounded-xl p-6 shadow-2xl font-bold text-sm">
           <div>Registrations</div>
           <div class="text-2xl text-gray-800 my-1">3.9K</div>
-          <div class="text-xs">
-            <span></span>
-            <span>since last week</span>
+          <div class="text-xs flex items-center">
+            <span>
+              <svg
+                class="w-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.998 7L18.998 15H4.99805L11.998 7Z"
+                  fill="#34D399"
+                />
+              </svg>
+            </span>
+            <span class="text-emerald-400">+21%</span>&nbsp;<span
+              >since last week</span
+            >
           </div>
         </div>
         <!-- /Card -->
         <!-- Card -->
-        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+        <div class="bg-white rounded-xl p-6 shadow-2xl font-bold text-sm">
           <div>Page Views</div>
           <div class="text-2xl text-gray-800 my-1">1.2M</div>
-          <div class="text-xs">
-            <span></span>
+          <div class="text-xs flex items-center">
+            <span>
+              <svg
+                class="w-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.998 7L18.998 15H4.99805L11.998 7Z"
+                  fill="#34D399"
+                />
+              </svg>
+            </span>
+            <span class="text-emerald-400">+21%</span>&nbsp;
             <span>since last week</span>
           </div>
         </div>
         <!-- /Card -->
         <!-- Card -->
-        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+        <div class="bg-white rounded-xl p-6 shadow-2xl font-bold text-sm">
           <div>Invited</div>
           <div class="text-2xl text-gray-800 my-1">0</div>
           <div class="text-xs">
@@ -204,31 +409,70 @@
         </div>
         <!-- /Card -->
         <!-- Card -->
-        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+        <div class="bg-white rounded-xl p-6 shadow-2xl font-bold text-sm">
           <div>Revenue</div>
           <div class="text-2xl text-gray-800 my-1">$12.6K</div>
-          <div class="text-xs">
-            <span></span>
+          <div class="text-xs flex items-center">
+            <span>
+              <svg
+                class="w-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.998 7L18.998 15H4.99805L11.998 7Z"
+                  fill="#34D399"
+                />
+              </svg>
+            </span>
+            <span class="text-emerald-400">+11%</span>&nbsp;
             <span>since last week</span>
           </div>
         </div>
         <!-- /Card -->
         <!-- Card -->
-        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+        <div class="bg-white rounded-xl p-6 shadow-2xl font-bold text-sm">
           <div>Attendees</div>
           <div class="text-2xl text-gray-800 my-1">2.8K</div>
-          <div class="text-xs">
-            <span></span>
+          <div class="text-xs flex items-center">
+            <span>
+              <svg
+                class="w-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.998 17L18.998 9H4.99805L11.998 17Z"
+                  fill="#FF5E5E"
+                />
+              </svg>
+            </span>
+            <span class="text-rose-400">-2%</span>&nbsp;
             <span>since last week</span>
           </div>
         </div>
         <!-- /Card -->
         <!-- Card -->
-        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+        <div class="bg-white rounded-xl p-6 shadow-2xl font-bold text-sm">
           <div>Conversion Rate</div>
           <div class="text-2xl text-gray-800 my-1">86%</div>
-          <div class="text-xs">
-            <span></span>
+          <div class="text-xs flex items-center">
+            <span>
+              <svg
+                class="w-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.998 7L18.998 15H4.99805L11.998 7Z"
+                  fill="#34D399"
+                />
+              </svg>
+            </span>
+            <span class="text-emerald-400">+21%</span>&nbsp;
             <span>since last week</span>
           </div>
         </div>
@@ -239,7 +483,7 @@
       <div class="w-5/12 ml-12">
         <div class="flex justify-between font-bold mb-6">
           <div>Top Sessions</div>
-          <div class="text-gray-800 flex items-center">
+          <a href="#" class="text-gray-800 flex items-center dropdown">
             <span>By attendance</span>
             <span class="ml-2 block">
               <img
@@ -248,7 +492,7 @@
                 class="w-4"
               />
             </span>
-          </div>
+          </a>
         </div>
         <!-- Progress Bars -->
         <!-- Bar -->
@@ -258,7 +502,10 @@
             <div>102</div>
           </div>
           <div class="w-full bg-green-100 h-2 rounded-full">
-            <div class="bg-emerald-400 h-2 rounded-full" style="width: 90%"></div>
+            <div
+              class="bg-emerald-400 h-2 rounded-full"
+              style="width: 90%"
+            ></div>
           </div>
         </div>
         <!-- /Bar -->
@@ -271,7 +518,10 @@
             <div>91</div>
           </div>
           <div class="w-full bg-green-100 h-2 rounded-full">
-            <div class="bg-emerald-400 h-2 rounded-full" style="width: 65%"></div>
+            <div
+              class="bg-emerald-400 h-2 rounded-full"
+              style="width: 65%"
+            ></div>
           </div>
         </div>
         <!-- /Bar -->
@@ -284,19 +534,33 @@
             <div>89</div>
           </div>
           <div class="w-full bg-green-100 h-2 rounded-full">
-            <div class="bg-emerald-400 h-2 rounded-full" style="width: 50%"></div>
+            <div
+              class="bg-emerald-400 h-2 rounded-full"
+              style="width: 50%"
+            ></div>
           </div>
         </div>
         <!-- /Bar -->
         <div class="mt-8">
-          <a href="#" class="flex items-center font-bold text-violet-800 text-sm">
+          <a
+            href="#"
+            class="flex items-center font-bold text-violet-800 text-sm"
+          >
             <span>More details</span>
             <span class="block ml-2">
-              <img
-                src="{% static 'main/icons/icon-arrow-right.svg' %}"
-                alt="More details"
+              <svg
                 class="w-4"
-              />
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12V12Z"
+                  fill="#6E44FF"
+                />
+              </svg>
             </span>
           </a>
         </div>
