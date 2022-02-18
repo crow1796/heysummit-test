@@ -1,0 +1,312 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+<div class="flex justify-between items-center w-full px-6 pt-6">
+  <div class="flex items-center">
+    <div class="rounded-lg bg-gray-100 py-2 px-3 w-24">
+      <a href="#">
+        <img src="{% static 'main/images/logo-clickup.svg' %}" alt="ClickUp" />
+      </a>
+    </div>
+
+    <div class="flex items-center font-bold mx-4">
+      <a href="#" class="flex items-center text-gray-800">
+        <span>Passion Economy 2021</span>
+        <span class="ml-4 block">
+          <img
+            src="{% static 'main/icons/icon-chevron-down.svg' %}"
+            alt="Chevron Down"
+            class="w-4"
+          />
+        </span>
+      </a>
+      <a href="#">
+        <span class="ml-4 block">
+          <img
+            src="{% static 'main/icons/icon-more-horizontal.svg' %}"
+            alt="More"
+            class="w-4"
+          /> </span
+      ></a>
+    </div>
+  </div>
+
+  <div class="flex">
+    <div class="flex items-center mr-8">
+      <div class="relative flex justify-between w-16 mr-3">
+        <div
+          class="line absolute h-px w-full bg-emerald-400 top-1/2 -translate-y-1/2"
+        ></div>
+        <div class="dot rounded-full w-3 h-3 bg-emerald-400"></div>
+        <div class="dot rounded-full w-3 h-3 bg-emerald-400"></div>
+        <div class="dot rounded-full w-3 h-3 bg-emerald-400"></div>
+      </div>
+      <div class="text-sm font-bold">
+        <span> Analysis </span>
+      </div>
+    </div>
+
+    <div class="flex items-center">
+      <div class="mr-4">
+        {% include 'main/partials/button.html' with text="Publish" color="default" only %}
+      </div>
+      {% include 'main/partials/button.html' with text="Preview Event" color="primary" icon="main/icons/chevron-down" only %}
+    </div>
+  </div>
+</div>
+
+<div class="border-b mx-6 mt-2 text-sm font-bold">
+  <ul class="flex">
+    <li class="mr-8">
+      <a
+        href=""
+        class="py-3 inline-block border-b-4 border-pink-400 text-gray-800"
+      >
+        Overview
+      </a>
+    </li>
+    <li class="mr-8">
+      <a href="" class="py-3 inline-block"> People </a>
+    </li>
+    <li class="mr-8">
+      <a href="" class="py-3 inline-block"> Agenda </a>
+    </li>
+    <li class="mr-8">
+      <a href="" class="py-3 inline-block"> Design </a>
+    </li>
+    <li class="mr-8">
+      <a href="" class="py-3 inline-block"> Emails </a>
+    </li>
+    <li class="mr-8">
+      <a href="" class="py-3 inline-block"> Settings </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Sub content -->
+<div class="sub-content bg-slate-50 flex-1 px-6 py-8 h-full">
+  <div class="border rounded-lg p-6">
+    <div class="flex justify-between">
+      <div class="flex">
+        <span
+          class="bg-pink-100 rounded-lg p-2 flex justify-center items-center"
+        >
+          <img
+            src="{% static 'main/icons/icon-camera-video.svg' %}"
+            alt="w-4"
+          />
+        </span>
+        <div class="flex flex-col font-bold ml-4">
+          <span class="text-xs"> Summit </span>
+          <div class="font-lg text-gray-800">Passion Economy 2021</div>
+        </div>
+      </div>
+
+      <div class="flex items-center">
+        <div class="mr-4">
+          {% include 'main/partials/button.html' with text="Copy Link" color="default" only %}
+        </div>
+        {% include 'main/partials/button.html' with text="Manage Event" color="default" only %}
+      </div>
+    </div>
+
+    <div class="mt-8 ml-14">
+      <div class="grid grid-cols-5">
+        <div class="flex flex-col font-bold text-xs">
+          <span> Event Stats </span>
+          <div class="font-lg text-gray-800 mt-4">Ended</div>
+        </div>
+        <div class="flex flex-col font-bold text-xs">
+          <span> Date </span>
+          <div class="font-lg text-gray-800 mt-4">18 Aug - 20 Aug, 2021</div>
+        </div>
+        <div class="flex flex-col font-bold text-xs">
+          <span> Ticket Price </span>
+          <div class="font-lg text-gray-800 mt-4">FREE</div>
+        </div>
+        <div class="flex flex-col font-bold text-xs">
+          <span> Presenters </span>
+          <div class="font-lg text-gray-800 mt-4">
+            <div class="flex -space-x-1 overflow-hidden">
+              <img
+                class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <img
+                class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <img
+                class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                alt=""
+              />
+              <img
+                class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+              <a
+                href="#"
+                class="inline-block px-1 text-violet-800 rounded-full ring-2 ring-white font-bold flex justify-center items-center bg-violet-200 hover:opacity-90"
+              >
+                +700
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col font-bold text-xs">
+          <span> Sessions </span>
+          <div class="font-lg text-gray-800 mt-4">4</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="mt-12">
+    <div class="flex items-center justify-between">
+      <div class="text-lg font-bold">Event Stats</div>
+      {% include 'main/partials/button.html' with text="Export Report" color="default" only %}
+    </div>
+
+    <!-- Stats Content -->
+    <div class="mt-8 flex">
+      <!-- Cards List -->
+      <div class="grid grid-cols-3 gap-x-6 gap-y-8 flex-1">
+        <!-- Card -->
+        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+          <div>Registrations</div>
+          <div class="text-2xl text-gray-800 my-1">3.9K</div>
+          <div class="text-xs">
+            <span></span>
+            <span>since last week</span>
+          </div>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+          <div>Page Views</div>
+          <div class="text-2xl text-gray-800 my-1">1.2M</div>
+          <div class="text-xs">
+            <span></span>
+            <span>since last week</span>
+          </div>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+          <div>Invited</div>
+          <div class="text-2xl text-gray-800 my-1">0</div>
+          <div class="text-xs">
+            <span>No invites sent yet</span>
+          </div>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+          <div>Revenue</div>
+          <div class="text-2xl text-gray-800 my-1">$12.6K</div>
+          <div class="text-xs">
+            <span></span>
+            <span>since last week</span>
+          </div>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+          <div>Attendees</div>
+          <div class="text-2xl text-gray-800 my-1">2.8K</div>
+          <div class="text-xs">
+            <span></span>
+            <span>since last week</span>
+          </div>
+        </div>
+        <!-- /Card -->
+        <!-- Card -->
+        <div class="bg-white rounded-xl p-8 shadow-2xl font-bold text-sm">
+          <div>Conversion Rate</div>
+          <div class="text-2xl text-gray-800 my-1">86%</div>
+          <div class="text-xs">
+            <span></span>
+            <span>since last week</span>
+          </div>
+        </div>
+        <!-- /Card -->
+      </div>
+      <!-- /Cards List -->
+      <!-- Sessions -->
+      <div class="w-5/12 ml-12">
+        <div class="flex justify-between font-bold mb-6">
+          <div>Top Sessions</div>
+          <div class="text-gray-800 flex items-center">
+            <span>By attendance</span>
+            <span class="ml-2 block">
+              <img
+                src="{% static 'main/icons/icon-chevron-down.svg' %}"
+                alt="Chevron Down"
+                class="w-4"
+              />
+            </span>
+          </div>
+        </div>
+        <!-- Progress Bars -->
+        <!-- Bar -->
+        <div class="mb-6">
+          <div class="flex justify-between items-center font-bold mb-3">
+            <div class="text-gray-800">Keynote - The future of remote work</div>
+            <div>102</div>
+          </div>
+          <div class="w-full bg-green-100 h-2 rounded-full">
+            <div class="bg-emerald-400 h-2 rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+        <!-- /Bar -->
+        <!-- Bar -->
+        <div class="mb-6">
+          <div class="flex justify-between items-center font-bold mb-3">
+            <div class="text-gray-800">
+              The Remote Future is already here...
+            </div>
+            <div>91</div>
+          </div>
+          <div class="w-full bg-green-100 h-2 rounded-full">
+            <div class="bg-emerald-400 h-2 rounded-full" style="width: 65%"></div>
+          </div>
+        </div>
+        <!-- /Bar -->
+        <!-- Bar -->
+        <div class="mb-6">
+          <div class="flex justify-between items-center font-bold mb-3">
+            <div class="text-gray-800">
+              Defining Careers Progression Models...
+            </div>
+            <div>89</div>
+          </div>
+          <div class="w-full bg-green-100 h-2 rounded-full">
+            <div class="bg-emerald-400 h-2 rounded-full" style="width: 50%"></div>
+          </div>
+        </div>
+        <!-- /Bar -->
+        <div class="mt-8">
+          <a href="#" class="flex items-center font-bold text-violet-800 text-sm">
+            <span>More details</span>
+            <span class="block ml-2">
+              <img
+                src="{% static 'main/icons/icon-arrow-right.svg' %}"
+                alt="More details"
+                class="w-4"
+              />
+            </span>
+          </a>
+        </div>
+        <!-- /Progress Bars -->
+      </div>
+      <!-- Sessions -->
+    </div>
+    <!-- /Stats Content -->
+  </div>
+  <!-- /Stats -->
+</div>
+<!-- /Sub content -->
+{% endblock %}

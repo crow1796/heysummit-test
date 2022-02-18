@@ -1,0 +1,89 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HeySummit</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    {% tailwind_css %}
+    <style>
+      body {
+        max-height: 100vh;
+        overflow: hidden;
+      }
+
+      * {
+        font-family: "Nunito", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="font-serif leading-normal tracking-normal text-gray-500">
+    <div class="h-screen w-full flex overflow-hidden">
+      <nav class="h-full flex flex-col justify-between w-16 p-2 border-r">
+        <div class="main-menu">
+          <div id="main-logo" class="mb-4">
+            <a href="/">
+              <img
+                src="{% static 'main/images/logo-heysummit-icon.svg' %}"
+                alt="HeySummit"
+                class="w-full"
+              />
+            </a>
+          </div>
+          <div class="menu-items flex flex-col">
+            <a
+              href="/"
+              class="mb-2 flex items-center justify-center rounded-md py-2 bg-pink-100"
+            >
+              <img
+                src="{% static 'main/icons/icon-ticket.svg' %}"
+                alt="Tickets"
+              />
+            </a>
+            <a
+              href="/"
+              class="mb-2 flex items-center justify-center rounded-md py-2"
+            >
+              <img
+                src="{% static 'main/icons/icon-users.svg' %}"
+                alt="People"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="account-menu">
+          <a
+            href="/"
+            class="flex items-center justify-center rounded-full bg-gray-100 py-2"
+          >
+            <img src="{% static 'main/icons/icon-user.svg' %}" alt="Account" />
+          </a>
+        </div>
+      </nav>
+      <div class="flex flex-grow h-full overflow-auto w-full">
+        <div class="w-full">{% block content %} {% endblock %}</div>
+      </div>
+
+      <div class="fixed bottom-0 right-0">
+        <a
+          href="#"
+          class="w-12 h-12 rounded-full bg-violet-700 flex justify-center items-center mb-6 mr-6"
+        >
+          <img
+            src="{% static 'main/icons/icon-chat-bubble.svg' %}"
+            alt="Send us a message"
+            class="w-7"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

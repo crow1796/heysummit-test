@@ -1,0 +1,9 @@
+{% if color == 'default' %}
+<a href="#" class="rounded-lg hover:opacity-90 bg-violet-200 py-3 px-6 text-sm font-bold">
+  <span class="text-violet-700"> {{ text }} </span>
+</a>
+{% elif color == 'primary' %}
+<a href="#" class="rounded-lg hover:opacity-90 bg-violet-700 py-3 px-6 text-sm font-bold">
+  <span class="text-white"> {{ text }} </span>
+</a>
+{% endif %}
